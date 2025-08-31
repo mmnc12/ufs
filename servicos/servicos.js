@@ -10,7 +10,7 @@ export const buscaPorId = (id) => {
 };
 
 export const buscaUfPorNome = (nomeUf) => {
-  return colecaoUf.filter((uf) => uf.nome.toLocaleLowerCase().includes(nomeUf));
+  return colecaoUf.filter((uf) => uf.nome.toLocaleLowerCase().includes(nomeUf.toLocaleLowerCase()));
 };
 
 
