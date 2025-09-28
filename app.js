@@ -1,7 +1,10 @@
 import express from 'express';
 import { buscaTodos, buscaPorId, buscaUfPorNome } from './servicos/servicos.js';
+import cors from 'cors';
 
 const app = express();
+
+app.use(cors({ origin: "*"}));
 
 app.get('/ufs', (req, res) => {
   const nomeUf = req.query.busca;
